@@ -1,34 +1,73 @@
-# Vite React Component Library Starter
+# Mashroom 3D Configurator
 
-This is a starter template for creating React component libraries using Vite. It includes a robust set of features to help you develop, test, and build your library efficiently.
+## Overview
 
-## Features
+This library provides a 3D configurator component for React applications, built using `@react-three/fiber` and `three.js`. The main component, `GLBViewer`, allows you to load and customize GLB models interactively.
 
-- React: A JavaScript library for web and native user interfaces.
-- TypeScript: A strongly typed superset of JavaScript.
-- Tailwind: A utility-first CSS framework.
-- Storybook: A frontend workshop for building UI components and pages in isolation.
-- Vite: A next generation frontend tooling that runs and builds your library incredibly fast.
-- Vitest: A next generation testing framework.
-- ESLint: A tool that finds and fixes problems in your code.
-- Prettier: A code formatter.
-- Github Action: A tool that deploys your Storybook to GitHub page automatically.
+## Installation
 
-## Get Started
+To use this library in your project, you need to install it along with its peer dependencies.
 
-1. Clone this repository
-2. Install dependencies using `pnpm i` (or `npm i` if you like)
+```sh
+npm install mash-3d-configurator
+npm install react@^19.0.0 react-dom@^19.0.0
+```
 
-## Scripts
+## Usage
 
-- `dev`: Starts the local Storybook server, use this to develop and preview your components.
-- `test`: Runs all your tests with vitest.
-- `test:watch`: Runs tests in watch mode.
-- `build`: Builds your Storybook as a static web application.
-- `build:lib`: Builds your component library with Vite.
-- `lint`: Runs ESLint.
-- `format`: Formats your code with Prettier.
+Here is an example of how to use the `GLBViewer` component in your React application:
+
+```jsx
+import React from 'react';
+import { GLBViewer } from 'mash-3d-configurator';
+
+function App() {
+  return (
+    <div className="App">
+      <GLBViewer glbUrl="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" materialDefinitions={materialDefinitions} />
+    </div>
+  );
+}
+
+export default App;
+```
+
+## GLBViewer Component
+
+The `GLBViewer` component allows you to load and customize a GLB model.
+
+### Props
+
+- `glbUrl`: The URL of the GLB model to load.
+- `materialDefinitions`: JSON array for materials.
+
+### Customization
+
+The `GLBViewer` component provides an interface to select and customize parts of the model. You can select different parts and change their materials interactively.
+
+### Development
+
+To run the test environment for development:
+
+```sh
+npm install
+npm run build:lib:watch
+npm run dev:test
+
+```
+
+To run Storybook:
+
+```sh
+npm run dev:storybook
+```
+
+To build Storybook:
+
+```sh
+npm run build:storybook
+```
 
 ## License
 
-MIT
+This project is licensed under the MIT License.
