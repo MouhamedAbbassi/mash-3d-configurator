@@ -154,15 +154,15 @@ export const GLBViewer: React.FC<GLBViewerProps> = ({ glbUrl, materialDefinition
   }, [shadowsEnabled, scene]);
 
   return (
-    <div className="bg-gray-200 text-center text-[#1A4044] p-12 px-10 max-sm:px-2">
+    <div className="bg-white text-center text-[#000] p-12 px-10 max-sm:px-2">
       <h1 className="text-lg font-extralight">Some fun? Try our</h1>
-      <h1 className="text-4xl font-semibold ">3D Configurator</h1>
+      <h1 className="text-4xl" style={{ fontFamily: 'mash-poppins-semiBold' }}>3D Configurator</h1>
 
       <div className="responsive-flex-3 flex justify-center items-center my-8">
         {/* 3D Viewer Section */}
         <div
           ref={viewerRef}
-          className="viewer-container relative bg-gray-100 rounded-2xl shadow-lg cursor-grab mx-4"
+          className="viewer-container relative bg-gray-50 rounded-2xl shadow-lg cursor-grab mx-4"
         >
           {/* Fullscreen Button */}
           <button
@@ -170,7 +170,7 @@ export const GLBViewer: React.FC<GLBViewerProps> = ({ glbUrl, materialDefinition
             className="absolute top-2 right-2 p-2 cursor-pointer z-10"
           >
             <svg
-              fill="#1A4044"
+              fill="#000"
               viewBox="0 0 2020 2020"
               width="32"
               height="32"
@@ -181,7 +181,7 @@ export const GLBViewer: React.FC<GLBViewerProps> = ({ glbUrl, materialDefinition
           {/* 3D Canvas */}
           <Canvas
             shadows
-            camera={{ position: [3, 2, 6], fov: 25 }}
+            camera={{ position: [3, 2, 6], fov: 20 }}
           >
             <ambientLight intensity={ambientLightIntensity} />
             <directionalLight

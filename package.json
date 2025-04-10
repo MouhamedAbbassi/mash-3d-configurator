@@ -1,7 +1,7 @@
 {
   "name": "mash-3d-configurator",
-  "private": true,
-  "version": "0.2.7",
+  "private": false,
+  "version": "0.3.0",
   "description": "mashroom 3d configurator",
   "author": "medab",
   "license": "MIT",
@@ -9,6 +9,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "sideEffects": [
     "**/*.css"
   ],
@@ -38,6 +41,7 @@
     "publish": "node publish.js"
   },
   "dependencies": {
+    "@fontsource/poppins": "^5.2.5",
     "@react-three/drei": "^10.0.6",
     "@react-three/fiber": "^9.1.2",
     "mash-3d-configurator": "file:",

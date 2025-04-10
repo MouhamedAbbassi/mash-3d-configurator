@@ -24,9 +24,9 @@ function App() {
   if (!materialDefinitions) return <p>Loading...</p>; 
 
   return (
-    <div>
+    <div className=''>
        {/* 3d configurator*/}
-       <GLBViewer glbUrl="/3d-model.glb" materialDefinitions={materialDefinitions} />
+       <GLBViewer glbUrl="/Med.glb" materialDefinitions={materialDefinitions} />
     </div>
   );
 }

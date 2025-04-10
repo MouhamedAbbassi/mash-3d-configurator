@@ -9,16 +9,9 @@ export default {
     theme: {
       extend: {
         fontFamily: {
-          inter: ["Inter", "sans-serif"], // Add your custom font
+          poppins: ['mash-poppins-medium', 'mash-poppins-SemiBold','sans-serif'],
         },
       },
-      screens: {
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",   // ✅ THIS is the one you need!
-        xl: "1280px",
-        "2xl": "1536px",
-      }
     },
     plugins: [],
   }
